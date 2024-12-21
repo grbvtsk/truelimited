@@ -11,7 +11,7 @@ const Story: React.FC<StoryProps>  = ({story,setStory})=>{
             })
     }, []);
 
-    const handleDelete = (id)=>{
+    const handleDelete = (id: any)=>{
         axios.delete(`/api/transcription/${id}`)
             .then(()=>{
                 setStory(prevState => prevState.filter(tran=>tran._id !== id))
