@@ -1,6 +1,7 @@
 import axios from "axios";
-
-const PaidModal = ({ isVisible,setPopupVisible, onClose,setIsPaid }) => {
+import React from "react";
+import {PaidModalProps} from "@/interfaces/paidModalProps.interface";
+const PaidModal: React.FC<PaidModalProps> = ({ isVisible,setPopupVisible, onClose,setIsPaid }) => {
     if (!isVisible) return null;
 
     const handlePayment = async()=> {

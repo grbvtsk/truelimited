@@ -1,6 +1,6 @@
 import OpenAI from "openai";
 
-export const POST = async (req) => {
+export const POST = async (req:any) => {
 
     const openai = new OpenAI(
         {

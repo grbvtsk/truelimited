@@ -1,7 +1,7 @@
 import connectMongo from '../../db/connect';
 import Transcription from "@/app/models/transcription";
 
-export async function DELETE(req, context){
+export async function DELETE(req:any, context:any){
     await connectMongo();
     const { id } = await context.params;
     try {
